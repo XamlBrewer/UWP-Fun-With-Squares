@@ -1,0 +1,77 @@
+﻿<Page x:Class="XamlBrewer.Uwp.SquarePathSample.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Foreground="{StaticResource PageForegroundBrush}">
+
+    <Grid Background="Transparent"
+          Padding="48 34 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="74" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Foreground="{StaticResource PageTitleBrush}"
+                   FontSize="48"
+                   FontWeight="Light"
+                   HorizontalAlignment="Left"
+                   Margin="6 0 0 0"
+                   TextLineBounds="TrimToCapHeight"
+                   FontFamily="Segoe UI">
+                <Run Text="About" />
+        </TextBlock>
+
+        <Path Data="{StaticResource InfoIcon}"
+              Fill="{StaticResource PageTitleBrush}"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Right"
+              Height="48"
+              Width="48"
+              Margin="0 0 20 0"
+              Stretch="Uniform" />
+
+        <Grid Margin="0 0 48 33"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock TextWrapping="WrapWholeWords"
+                       Foreground="{StaticResource PageForegroundBrush}"
+                       FontSize="20"
+                       Grid.Row="1"
+                       Margin="0"
+                       FontFamily="Segoe UI">
+                <Run>This app shows two ways to draw and change an elliptical arc in UWP: </Run>
+                <LineBreak />
+                <Run>* using {x:Bind} against a XAML ArcSegment, and</Run>
+                <LineBreak />
+                <Run>* {Binding} to a user control hosting Win2D and Composition. </Run>
+                <LineBreak />
+                <LineBreak />
+                <Run>It also demonstrates how to build a user control for circle segments and pie shapes.</Run>
+                <LineBreak />
+                <LineBreak />
+                <LineBreak />
+                <Run>Background image designed by </Run>
+                <Hyperlink NavigateUri="http://www.freepik.com">Harryarts / Freepik</Hyperlink>
+                <Run>.</Run>
+                <LineBreak />
+                <Run>'above' and 'middle' icons by </Run>
+                <Hyperlink NavigateUri="http://www.thenounproject.com">Tomasz Pasternak from the Noun Project</Hyperlink>
+                <Run>.</Run>
+                <LineBreak />
+                <Run>'donut chart' icon by </Run>
+                <Hyperlink NavigateUri="http://www.thenounproject.com">Gregor Cresnar from the Noun Project</Hyperlink>
+                <Run>.</Run>
+                <LineBreak />
+                <Run>'game' icon by </Run>
+                <Hyperlink NavigateUri="http://www.thenounproject.com">Enshia from the Noun Project</Hyperlink>
+                <Run>.</Run>                
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Page>
