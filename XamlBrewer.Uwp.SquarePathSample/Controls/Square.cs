@@ -1,8 +1,5 @@
-﻿using Microsoft.Graphics.Canvas;
-using Microsoft.Graphics.Canvas.Geometry;
-using System;
+﻿using Microsoft.Graphics.Canvas.Geometry;
 using System.Numerics;
-using Windows.UI.Composition;
 using Windows.UI.Xaml;
 
 namespace XamlBrewer.Uwp.Controls
@@ -17,6 +14,14 @@ namespace XamlBrewer.Uwp.Controls
 
         public static readonly DependencyProperty SideProperty =
             DependencyProperty.Register(nameof(Side), typeof(double), typeof(Square), new PropertyMetadata(0d, Render));
+
+        public Square() : this(false)
+        {
+        }
+
+        public Square(bool delayRendering) : base(delayRendering)
+        {
+        }
 
         public double CenterPointX
         {

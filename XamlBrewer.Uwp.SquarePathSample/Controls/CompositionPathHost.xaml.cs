@@ -31,6 +31,8 @@ namespace XamlBrewer.Uwp.Controls
         public static readonly DependencyProperty IsStrokeRoundedProperty =
             DependencyProperty.Register(nameof(IsStrokeRounded), typeof(bool), typeof(CompositionPathHost), new PropertyMetadata(false, Render));
 
+        private bool _delayRendering;
+
         public double StartPointX
         {
             get { return (double)GetValue(StartPointXProperty); }
@@ -73,6 +75,23 @@ namespace XamlBrewer.Uwp.Controls
             set { SetValue(IsStrokeRoundedProperty, value); }
         }
 
+        public bool DelayRendering
+        {
+            get
+            {
+                return _delayRendering;
+            }
+
+            set
+            {
+                _delayRendering = value;
+                if (!_delayRendering)
+                {
+                    Render();
+                }
+            }
+        }
+
         protected Grid Container => Host;
 
         public CompositionPathHost()
@@ -81,6 +100,11 @@ namespace XamlBrewer.Uwp.Controls
 
             Loaded += CompositionPathHost_Loaded;
             Unloaded += CompositionPathHost_Unloaded;
+        }
+
+        public CompositionPathHost(bool delayRendering) : this()
+        {
+            _delayRendering = delayRendering;
         }
 
         private void CompositionPathHost_Loaded(object sender, RoutedEventArgs e)
@@ -97,7 +121,7 @@ namespace XamlBrewer.Uwp.Controls
         protected static void Render(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var path = (CompositionPathHost)d;
-            if (path.Container.ActualWidth == 0)
+            if (path._delayRendering || path.Container.ActualWidth == 0)
             {
                 return;
             }
