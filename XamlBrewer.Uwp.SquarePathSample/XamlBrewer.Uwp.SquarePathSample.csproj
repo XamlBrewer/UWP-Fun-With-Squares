@@ -120,8 +120,8 @@
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BulgedCheckerboardPage.xaml.cs">
-      <DependentUpon>BulgedCheckerboardPage.xaml</DependentUpon>
+    <Compile Include="Views\BulgingCheckerboardPage.xaml.cs">
+      <DependentUpon>BulgingCheckerboardPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CafeWallPage.xaml.cs">
       <DependentUpon>CafeWallPage.xaml</DependentUpon>
@@ -131,9 +131,6 @@
     </Compile>
     <Compile Include="Views\RectanglePage.xaml.cs">
       <DependentUpon>RectanglePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SquaresPage.xaml.cs">
-      <DependentUpon>SquaresPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -183,7 +180,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\BulgedCheckerboardPage.xaml">
+    <Page Include="Views\BulgingCheckerboardPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -196,10 +193,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\RectanglePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\SquaresPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

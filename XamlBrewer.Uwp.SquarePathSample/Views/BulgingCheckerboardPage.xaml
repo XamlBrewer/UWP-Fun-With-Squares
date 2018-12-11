@@ -1,4 +1,4 @@
-﻿<Page x:Class="XamlBrewer.Uwp.SquarePathSample.SquaresPage"
+﻿<Page x:Class="XamlBrewer.Uwp.SquarePathSample.BulgingCheckerboardPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -24,9 +24,9 @@
                    Margin="6 0 0 0"
                    TextLineBounds="TrimToCapHeight"
                    FontFamily="Segoe UI">
-                <Run Text="Squares" />
+                <Run Text="Bulging Checkerboard Illusion" />
         </TextBlock>
-        <Path Data="{StaticResource SquaresIcon}"
+        <Path Data="{StaticResource BulgeIcon}"
               Fill="{StaticResource PageTitleBrush}"
               VerticalAlignment="Top"
               HorizontalAlignment="Right"
@@ -34,8 +34,16 @@
               Width="48"
               Margin="0 0 20 0"
               Stretch="Uniform" />
-        <controls:SquareOfSquares x:Name="Squares"
-                                  Grid.RowSpan="3"
-                                  Margin="0 0 48 34" />
+
+        <!-- Main Beef -->
+        <Grid Margin="20"
+              Grid.Row="1">
+            <Viewbox>
+                <Canvas x:Name="Canvas"
+                        Height="1500"
+                        Width="1500"
+                        Background="White" />
+            </Viewbox>
+        </Grid>
     </Grid>
 </Page>
