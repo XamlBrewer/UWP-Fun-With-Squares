@@ -97,7 +97,7 @@
                            Stretch="UniformToFill"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
-                           Opacity=".25" />
+                           Opacity=".4" />
 
                     <!-- Logo -->
                     <Viewbox Grid.Row="2"

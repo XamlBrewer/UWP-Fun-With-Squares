@@ -1,4 +1,8 @@
-﻿using Windows.UI;
+﻿using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.Geometry;
+using System.Numerics;
+using Windows.UI;
+using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -102,5 +106,47 @@ namespace XamlBrewer.Uwp.Controls
         }
 
         protected abstract void Render();
+
+        // Reusable device.
+        protected static CanvasDevice CanvasDevice = new CanvasDevice();
+
+        protected CanvasPathBuilder GetCanvasPathBuilder()
+        {
+            var canvasPathBuilder = new CanvasPathBuilder(CanvasDevice);
+            if (IsStrokeRounded)
+            {
+                canvasPathBuilder.SetSegmentOptions(CanvasFigureSegmentOptions.ForceRoundLineJoin);
+            }
+            else
+            {
+                canvasPathBuilder.SetSegmentOptions(CanvasFigureSegmentOptions.None);
+            }
+
+            return canvasPathBuilder;
+        }
+
+        protected void Render(CanvasPathBuilder canvasPathBuilder)
+        {
+            // Path
+            var canvasGeometry = CanvasGeometry.CreatePath(canvasPathBuilder);
+            var compositionPath = new CompositionPath(canvasGeometry);
+            var compositor = Window.Current.Compositor;
+            var pathGeometry = compositor.CreatePathGeometry();
+            pathGeometry.Path = compositionPath;
+            var spriteShape = compositor.CreateSpriteShape(pathGeometry);
+            spriteShape.FillBrush = compositor.CreateColorBrush(Fill);
+            spriteShape.StrokeThickness = (float)StrokeThickness;
+            spriteShape.StrokeBrush = compositor.CreateColorBrush(Stroke);
+            spriteShape.StrokeStartCap = IsStrokeRounded ? CompositionStrokeCap.Round : CompositionStrokeCap.Square;
+            spriteShape.StrokeEndCap = IsStrokeRounded ? CompositionStrokeCap.Round : CompositionStrokeCap.Square;
+
+            // Visual
+            var shapeVisual = compositor.CreateShapeVisual();
+            shapeVisual.Size = new Vector2((float)Container.ActualWidth, (float)Container.ActualHeight);
+            shapeVisual.Shapes.Add(spriteShape);
+            var root = Container.GetVisual();
+            root.Children.RemoveAll();
+            root.Children.InsertAtTop(shapeVisual);
+        }
     }
 }
