@@ -55,7 +55,7 @@
                 <LineBreak />
                 <Run>* Bulging checkerboard, </Run>
                 <LineBreak />
-                <Run>* Square Circle Spiral, </Run>
+                <Run FontFamily="Segoe UI">* Square Circle Spiral, </Run>
                 <LineBreak />
                 <LineBreak />
                 <Run>It also demonstrates how to optimize for many instances, and apply and animate a rotation.</Run>

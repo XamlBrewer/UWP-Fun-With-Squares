@@ -61,6 +61,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
+                                StrokeThickness = 0,
                                 Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,

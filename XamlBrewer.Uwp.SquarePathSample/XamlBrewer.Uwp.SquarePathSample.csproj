@@ -100,9 +100,6 @@
     <Compile Include="Controls\CompositionPathHost.xaml.cs">
       <DependentUpon>CompositionPathHost.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\EllipticalArc.xaml.cs">
-      <DependentUpon>EllipticalArc.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\CircleSegment.cs" />
     <Compile Include="Controls\UIElementExtensions.cs" />
     <Compile Include="Mvvm\BindableBase.cs" />
@@ -164,10 +161,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Controls\CompositionPathHost.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\EllipticalArc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

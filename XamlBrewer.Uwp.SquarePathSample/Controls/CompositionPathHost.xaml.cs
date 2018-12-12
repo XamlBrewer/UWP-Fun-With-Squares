@@ -17,7 +17,7 @@ namespace XamlBrewer.Uwp.Controls
             DependencyProperty.Register(nameof(StartPointY), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(0d, Render));
 
         public static readonly DependencyProperty StrokeThicknessProperty =
-            DependencyProperty.Register(nameof(StrokeThickness), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(1.0, Render));
+            DependencyProperty.Register(nameof(StrokeThickness), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(1d, Render));
 
         public static readonly DependencyProperty StrokeProperty =
             DependencyProperty.Register(nameof(Stroke), typeof(Color), typeof(CompositionPathHost), new PropertyMetadata((Color)Application.Current.Resources["SystemAccentColor"], Render));
@@ -31,7 +31,35 @@ namespace XamlBrewer.Uwp.Controls
         public static readonly DependencyProperty IsStrokeRoundedProperty =
             DependencyProperty.Register(nameof(IsStrokeRounded), typeof(bool), typeof(CompositionPathHost), new PropertyMetadata(false, Render));
 
-        private bool _delayRendering;
+        public static readonly DependencyProperty RotationCenterXProperty =
+            DependencyProperty.Register(nameof(RotationCenterX), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(0d, Render));
+
+        public static readonly DependencyProperty RotationAngleProperty =
+            DependencyProperty.Register(nameof(RotationAngle), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(0d, Render));
+
+        public static readonly DependencyProperty RotationCenterYProperty =
+            DependencyProperty.Register(nameof(RotationCenterY), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(0d, Render));
+
+        private bool _delayRendering = false;
+        private ShapeVisual _shapeVisual = null;
+
+        public double RotationCenterX
+        {
+            get { return (double)GetValue(RotationCenterXProperty); }
+            set { SetValue(RotationCenterXProperty, value); }
+        }
+
+        public double RotationCenterY
+        {
+            get { return (double)GetValue(RotationCenterYProperty); }
+            set { SetValue(RotationCenterYProperty, value); }
+        }
+
+        public double RotationAngle
+        {
+            get { return (double)GetValue(RotationAngleProperty); }
+            set { SetValue(RotationAngleProperty, value); }
+        }
 
         public double StartPointX
         {
@@ -91,6 +119,8 @@ namespace XamlBrewer.Uwp.Controls
                 }
             }
         }
+
+        public ShapeVisual ShapeVisual => _shapeVisual;
 
         protected Grid Container => Host;
 
@@ -168,9 +198,13 @@ namespace XamlBrewer.Uwp.Controls
             var shapeVisual = compositor.CreateShapeVisual();
             shapeVisual.Size = new Vector2((float)Container.ActualWidth, (float)Container.ActualHeight);
             shapeVisual.Shapes.Add(spriteShape);
+            shapeVisual.CenterPoint = new Vector3((float)RotationCenterX, (float)RotationCenterY, 0f);
+            shapeVisual.RotationAxis = new Vector3(0f, 0f, 1f);
+            shapeVisual.RotationAngle = (float)RotationAngle;
             var root = Container.GetVisual();
             root.Children.RemoveAll();
             root.Children.InsertAtTop(shapeVisual);
+            _shapeVisual = shapeVisual;
         }
     }
 }
