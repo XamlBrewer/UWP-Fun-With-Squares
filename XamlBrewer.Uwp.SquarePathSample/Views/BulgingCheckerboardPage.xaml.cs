@@ -25,7 +25,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     var blackSquare = new Square(true)
                     {
                         Side = side,
-                        Fill = Colors.Black,
+                        Fill = Colors.LightSlateGray,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = i * 100 + 50,
@@ -36,7 +36,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     blackSquare = new Square(true)
                     {
                         Side = side,
-                        Fill = Colors.Black,
+                        Fill = Colors.LightSlateGray,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = i * 100 - 50,
@@ -62,7 +62,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             {
                                 Side = side / 5,
                                 StrokeThickness = 0,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) - (i * 100) - 30,
@@ -77,7 +77,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) - (i * 100) + 30,
@@ -94,7 +94,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) + (i * 100) + 30,
@@ -109,7 +109,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) + (i * 100) - 30,
@@ -125,7 +125,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) - (i * 100) + 30,
@@ -140,7 +140,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) - (i * 100) - 30,
@@ -157,7 +157,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) + (i * 100) - 30,
@@ -172,7 +172,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                             smallSquare = new Square(true)
                             {
                                 Side = side / 5,
-                                Fill = (i + j) % 2 == 0 ? Colors.White : Colors.Black,
+                                Fill = (i + j) % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                                 Height = Canvas.Height,
                                 Width = Canvas.Width,
                                 CenterPointX = (Canvas.Width / 2) + (i * 100) + 30,

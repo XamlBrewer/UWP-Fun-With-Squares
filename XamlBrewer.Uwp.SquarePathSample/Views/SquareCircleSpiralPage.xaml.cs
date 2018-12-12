@@ -37,7 +37,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     var square = new Square
                     {
                         Side = side,
-                        Stroke = i % 2 == 0 ? Colors.Silver : Colors.Black,
+                        Stroke = i % 2 == 0 ? Colors.WhiteSmoke : Colors.LightSlateGray,
                         StrokeThickness = 6,
                         Height = Canvas.Height,
                         Width = Canvas.Width,

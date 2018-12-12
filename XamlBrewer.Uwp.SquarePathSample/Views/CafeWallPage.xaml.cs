@@ -24,7 +24,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     var blackSquare = new Square
                     {
                         Side = side,
-                        Fill = Colors.Black,
+                        Fill = Colors.LightSlateGray,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = (240 * i),
@@ -34,7 +34,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     var whiteSquare = new Square
                     {
                         Side = side,
-                        Fill = Colors.White,
+                        Fill = Colors.WhiteSmoke,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = (240 * i) + 120,
@@ -42,12 +42,12 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     };
                     Canvas.Children.Add(whiteSquare);
                 }
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < 5; j++)
                 {
                     var blackSquare = new Square
                     {
                         Side = side,
-                        Fill = Colors.Black,
+                        Fill = Colors.LightSlateGray,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = (240 * i) + 40,
@@ -57,7 +57,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     var whiteSquare = new Square
                     {
                         Side = side,
-                        Fill = Colors.White,
+                        Fill = Colors.WhiteSmoke,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = (240 * i) - 80,
@@ -66,12 +66,12 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     Canvas.Children.Add(whiteSquare);
                 }
 
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < 5; j++)
                 {
                     var blackSquare = new Square
                     {
                         Side = side,
-                        Fill = Colors.Black,
+                        Fill = Colors.LightSlateGray,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = (240 * i) - 30,
@@ -81,7 +81,7 @@ namespace XamlBrewer.Uwp.SquarePathSample
                     var whiteSquare = new Square
                     {
                         Side = side,
-                        Fill = Colors.White,
+                        Fill = Colors.WhiteSmoke,
                         Height = Canvas.Height,
                         Width = Canvas.Width,
                         CenterPointX = (240 * i) + 90,

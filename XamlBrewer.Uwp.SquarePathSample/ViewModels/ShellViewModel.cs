@@ -14,6 +14,7 @@ namespace Mvvm
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("TilesIcon"), Text = "Café Wall", NavigationDestination = typeof(CafeWallPage) });
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("BulgeIcon"), Text = "Checkerboard Bulge", NavigationDestination = typeof(BulgingCheckerboardPage) });
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("SpiralIcon"), Text = "Square Circle Spiral", NavigationDestination = typeof(SquareCircleSpiralPage) });
+            Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("SquaresIcon"), Text = "Breathing Square", NavigationDestination = typeof(BreathingSquarePage) });
             SecondMenu.Add(new MenuItem() { Glyph = Icon.GetIcon("InfoIcon"), Text = "About", NavigationDestination = typeof(AboutPage) });
         }
     }

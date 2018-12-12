@@ -42,7 +42,7 @@
                 <Canvas x:Name="Canvas"
                         Height="1200"
                         Width="1200"
-                        Background="Gray" />
+                        Background="LightSteelBlue" />
             </Viewbox>
         </Grid>
     </Grid>

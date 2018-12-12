@@ -117,6 +117,9 @@
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BreathingSquarePage.xaml.cs">
+      <DependentUpon>BreathingSquarePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SquareCircleSpiralPage.xaml.cs">
       <DependentUpon>SquareCircleSpiralPage.xaml</DependentUpon>
     </Compile>
@@ -173,6 +176,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BreathingSquarePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
