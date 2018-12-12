@@ -52,11 +52,13 @@
                 <Run FontFamily="Segoe UI">For Unit Tests, we create some well-known optical illusions with squares:</Run>
                 <LineBreak />
                 <Run>* Café Wall illusion, </Run>
-                <LineBreak FontFamily="Segoe UI" />
+                <LineBreak />
                 <Run>* Bulging checkerboard, </Run>
                 <LineBreak />
+                <Run>* Square Circle Spiral, </Run>
                 <LineBreak />
-                <Run>It also demonstrates how to apply and animate a rotation.</Run>
+                <LineBreak />
+                <Run>It also demonstrates how to optimize for many instances, and apply and animate a rotation.</Run>
             </TextBlock>
         </Grid>
     </Grid>
