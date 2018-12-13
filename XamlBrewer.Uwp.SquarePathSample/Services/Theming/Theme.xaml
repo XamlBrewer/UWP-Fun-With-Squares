@@ -29,11 +29,11 @@
     <AcrylicBrush x:Key="SplitViewInlineBackgroundBrush"
                   BackgroundSource="HostBackdrop"
                   TintOpacity="0.6"
-                  FallbackColor="Silver" />
+                  FallbackColor="WhiteSmoke" />
     <AcrylicBrush x:Key="SplitViewOverlayBackgroundBrush"
                   BackgroundSource="Backdrop"
                   TintOpacity="0.6"
-                  FallbackColor="Silver" />
+                  FallbackColor="WhiteSmoke" />
     <SolidColorBrush x:Key="SplitViewForegroundBrush"
                      Color="LightSlateGray" />
 

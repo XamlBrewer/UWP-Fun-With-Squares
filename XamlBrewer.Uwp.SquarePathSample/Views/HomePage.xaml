@@ -33,35 +33,27 @@
               Width="48"
               Margin="0 0 20 0"
               Stretch="Uniform" />
-        <Grid Margin="0 0 48 33"
-              Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <TextBlock TextWrapping="WrapWholeWords"
-                       Foreground="{StaticResource PageForegroundBrush}"
-                       FontSize="20"
-                       Grid.Row="1"
-                       Margin="0"
-                       FontFamily="Segoe UI">
-                <Run FontFamily="Segoe UI">This app shows how to create bindable Rectangle and Square controls that are drawn by Windows Composition.</Run>
-                <LineBreak />
-                <LineBreak />
-                <Run FontFamily="Segoe UI">For Unit Tests, we create some well-known optical illusions with squares:</Run>
-                <LineBreak />
-                <Run>* Café Wall illusion, </Run>
-                <LineBreak />
-                <Run>* Bulging checkerboard, </Run>
-                <LineBreak />
-                <Run>* Square Circle Spiral, and</Run>
-                <LineBreak />
-                <Run FontFamily="Segoe UI">* Breathing Square.</Run>
-                <LineBreak />
-                <LineBreak />
-                <Run>It also demonstrates how to optimize for many instances, and apply and animate a rotation.</Run>
-            </TextBlock>
-        </Grid>
+        <TextBlock TextWrapping="WrapWholeWords"
+                   Foreground="{StaticResource PageForegroundBrush}"
+                   FontSize="20"
+                   Grid.Row="1"
+                   Margin="0"
+                   FontFamily="Segoe UI">
+            <Run FontFamily="Segoe UI">This app shows how to create bindable Rectangle and Square controls that are drawn by Windows Composition. It also demonstrates how to optimize for many instances, and apply transformations and animations on them.</Run>
+            <LineBreak />
+            <LineBreak />
+            <Run FontFamily="Segoe UI">It creates some well-known optical illusions with squares:</Run>
+            <LineBreak />
+            <Run>* Café Wall illusion, </Run>
+            <LineBreak />
+            <Run>* Bulging Checkerboard, </Run>
+            <LineBreak />
+            <Run>* Square Circle Spiral, and</Run>
+            <LineBreak />
+            <Run>* Breathing Square.</Run>
+            <LineBreak />
+            <LineBreak />
+            <Run>Enjoy!</Run>
+        </TextBlock>
     </Grid>
 </Page>
