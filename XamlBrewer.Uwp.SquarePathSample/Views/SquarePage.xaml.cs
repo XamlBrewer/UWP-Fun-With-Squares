@@ -14,12 +14,18 @@ namespace XamlBrewer.Uwp.SquarePathSample
         {
             if ((sender as ToggleSwitch).IsOn)
             {
-                Rectangle.Fill = Colors.LightSteelBlue;
+                Square.Fill = Colors.LightSteelBlue;
             }
             else
             {
-                Rectangle.Fill = Colors.Transparent;
+                Square.Fill = Colors.Transparent;
             }
+        }
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            Square.RotationCenterX = Square.CenterPointX;
+            Square.RotationCenterY = Square.CenterPointY;
         }
     }
 }

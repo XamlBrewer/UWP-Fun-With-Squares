@@ -61,7 +61,7 @@
                 <Grid Background="{StaticResource DarkeningBrush}"
                       Height="400"
                       Width="400">
-                    <controls:Square x:Name="Rectangle"
+                    <controls:Square x:Name="Square"
                                      Stroke="LightSlateGray"
                                      CenterPointX="150"
                                      CenterPointY="250"
@@ -72,30 +72,41 @@
                 <StackPanel VerticalAlignment="Top"
                             Grid.Column="1">
                     <Slider Header="Centerpoint X"
-                            Value="{Binding CenterPointX, ElementName=Rectangle, Mode=TwoWay}"
+                            Value="{Binding CenterPointX, ElementName=Square, Mode=TwoWay}"
                             Maximum="400" />
                     <Slider Header="Side"
-                            Value="{Binding Side, ElementName=Rectangle, Mode=TwoWay}"
+                            Value="{Binding Side, ElementName=Square, Mode=TwoWay}"
                             Maximum="400"
                             FontFamily="Segoe UI" />
+                    <Slider Header="Rotation Center X"
+                            Value="{Binding RotationCenterX, ElementName=Square, Mode=TwoWay}"
+                            Maximum="400" />
                     <ToggleSwitch Header="Fill"
                                   Toggled="FillSwitch_Toggled"
                                   OnContent="Yes"
                                   OffContent="No" />
                     <ToggleSwitch Header="Rounded Stroke"
-                                  IsOn="{Binding IsStrokeRounded, ElementName=Rectangle, Mode=TwoWay}"
+                                  IsOn="{Binding IsStrokeRounded, ElementName=Square, Mode=TwoWay}"
                                   OnContent="Yes"
                                   OffContent="No" />
                 </StackPanel>
                 <StackPanel VerticalAlignment="Top"
                             Grid.Column="2">
                     <Slider Header="Centerpoint Y"
-                            Value="{Binding CenterPointY, ElementName=Rectangle, Mode=TwoWay}"
+                            Value="{Binding CenterPointY, ElementName=Square, Mode=TwoWay}"
                             Maximum="400" />
                     <Slider Header="Stroke Thickness"
-                            Value="{Binding StrokeThickness, ElementName=Rectangle, Mode=TwoWay}"
+                            Value="{Binding StrokeThickness, ElementName=Square, Mode=TwoWay}"
                             Maximum="40"
                             StepFrequency=".5" />
+                    <Slider Header="Rotation Center Y"
+                            Value="{Binding RotationCenterY, ElementName=Square, Mode=TwoWay}"
+                            Maximum="400" />
+                    <Slider Header="Rotation Angle"
+                            Value="{Binding RotationAngle, ElementName=Square, Mode=TwoWay}"
+                            Maximum="7"
+                            StepFrequency=".1" />
+                    <Button Click="Button_Click">Align Rotation Center</Button>
                 </StackPanel>
 
             </Grid>
