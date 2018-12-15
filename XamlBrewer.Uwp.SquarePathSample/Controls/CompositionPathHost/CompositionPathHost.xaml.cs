@@ -1,5 +1,6 @@
 ﻿using Microsoft.Graphics.Canvas;
 using Microsoft.Graphics.Canvas.Geometry;
+using System;
 using System.Numerics;
 using Windows.UI;
 using Windows.UI.Composition;
@@ -41,7 +42,13 @@ namespace XamlBrewer.Uwp.Controls
             DependencyProperty.Register(nameof(RotationCenterY), typeof(double), typeof(CompositionPathHost), new PropertyMetadata(0d, Render));
 
         private bool _delayRendering = false;
-        private ShapeVisual _shapeVisual = null;
+
+        protected virtual void OnRendered(RenderedEventArgs e)
+        {
+            Rendered?.Invoke(this, e);
+        }
+
+        public event EventHandler<RenderedEventArgs> Rendered;
 
         public double RotationCenterX
         {
@@ -119,8 +126,6 @@ namespace XamlBrewer.Uwp.Controls
                 }
             }
         }
-
-        public ShapeVisual ShapeVisual => _shapeVisual;
 
         protected Grid Container => Host;
 
@@ -204,7 +209,7 @@ namespace XamlBrewer.Uwp.Controls
             var root = Container.GetVisual();
             root.Children.RemoveAll();
             root.Children.InsertAtTop(shapeVisual);
-            _shapeVisual = shapeVisual;
+            OnRendered(new RenderedEventArgs { ShapeVisual = shapeVisual });
         }
     }
 }

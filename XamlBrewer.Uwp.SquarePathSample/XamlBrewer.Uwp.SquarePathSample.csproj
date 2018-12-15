@@ -95,9 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CompositionPathHost\RenderedEventArgs.cs" />
     <Compile Include="Controls\Rectangle.cs" />
     <Compile Include="Controls\Square.cs" />
-    <Compile Include="Controls\CompositionPathHost.xaml.cs">
+    <Compile Include="Controls\CompositionPathHost\CompositionPathHost.xaml.cs">
       <DependentUpon>CompositionPathHost.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CircleSegment.cs" />
@@ -163,7 +164,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\CompositionPathHost.xaml">
+    <Page Include="Controls\CompositionPathHost\CompositionPathHost.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
