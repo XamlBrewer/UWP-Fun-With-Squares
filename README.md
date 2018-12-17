@@ -7,3 +7,5 @@ This app shows how to create bindable Rectangle and Square controls that are dra
 ![Screenshot](Assets/Intertwining.png?raw=true)
 
 ![Screenshot](Assets/BreathingSquare.gif?raw=true)
+
+![Screenshot](Assets/MotionBinding.gif?raw=true)
