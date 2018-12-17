@@ -66,6 +66,9 @@
             <Run>'abstract' icon for the spiral by </Run>
             <Hyperlink NavigateUri="http://www.thenounproject.com">Danil Polshin from the Noun Project</Hyperlink>
             <Run>.</Run> 
+            <Run>'Rhombuses' icon for motion binding by </Run>
+            <Hyperlink NavigateUri="http://www.thenounproject.com">Andrejs Kirma from the Noun Project</Hyperlink>
+            <Run>.</Run>             
             <LineBreak />
             <LineBreak />
             <Run>Inspiration:</Run>

@@ -9,8 +9,6 @@ namespace XamlBrewer.Uwp.SquarePathSample
 {
     public sealed partial class BreathingSquarePage : Page
     {
-        //private Square _backSquare;
-
         public BreathingSquarePage()
         {
             this.InitializeComponent();
