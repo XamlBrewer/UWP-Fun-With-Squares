@@ -11,33 +11,29 @@
     <Page.Resources>
         <Storyboard x:Name="myStoryboard"
                     RepeatBehavior="Forever">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Square"
-                                           Storyboard.TargetProperty="(Canvas.Left)">
-                <SplineDoubleKeyFrame KeySpline="0.36,0,0.64,1"
-                                      Value="50"
-                                      KeyTime="0:0:2" />
-                <SplineDoubleKeyFrame KeySpline="0.36,0,0.64,1"
-                                      Value="-50"
-                                      KeyTime="0:0:4" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Square"
-                                           Storyboard.TargetProperty="(Canvas.Top)">
-                <EasingDoubleKeyFrame Value="-50"
-                                      KeyTime="0:0:1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase  EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <SplineDoubleKeyFrame KeySpline="0.36,0,0.64,1"
-                                      Value="50"
-                                      KeyTime="0:0:3" />
-                <EasingDoubleKeyFrame Value="0"
-                                      KeyTime="0:0:4">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuadraticEase  EasingMode="EaseIn" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="Square"
+                             Storyboard.TargetProperty="(Canvas.Left)"
+                             From="-50"
+                             To="50"
+                             Duration="0:0:2"
+                             AutoReverse="True"
+                             RepeatBehavior="Forever">
+                <DoubleAnimation.EasingFunction>
+                    <SineEase EasingMode="EaseInOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Square"
+                             Storyboard.TargetProperty="(Canvas.Top)"
+                             From="-50"
+                             To="50"
+                             BeginTime="0:0:1"
+                             Duration="0:0:2"
+                             AutoReverse="True"
+                             RepeatBehavior="Forever">
+                <DoubleAnimation.EasingFunction>
+                    <SineEase EasingMode="EaseInOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
         </Storyboard>
     </Page.Resources>
 
@@ -89,7 +85,7 @@
                                      RotationCenterY="500"
                                      RotationAngle=".785"
                                      Canvas.Left="-50"
-                                     Canvas.Top="0">
+                                     Canvas.Top="-50">
 
                     </controls:Square>
                     <controls:Square Fill="LightSteelBlue"
