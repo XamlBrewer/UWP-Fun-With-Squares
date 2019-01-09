@@ -89,6 +89,10 @@
                                   IsOn="{Binding IsStrokeRounded, ElementName=Square, Mode=TwoWay}"
                                   OnContent="Yes"
                                   OffContent="No" />
+                    <ToggleSwitch Header="Delay Rendering"
+                                  IsOn="{Binding DelayRendering, ElementName=Square, Mode=TwoWay}"
+                                  OnContent="Yes"
+                                  OffContent="No" />
                 </StackPanel>
                 <StackPanel VerticalAlignment="Top"
                             Grid.Column="2">
